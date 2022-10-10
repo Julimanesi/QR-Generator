@@ -34,6 +34,7 @@ namespace WinFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.BotonGenerador = new System.Windows.Forms.Button();
             this.AdvertenciaText = new System.Windows.Forms.Label();
+            this.BotonGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenQR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,14 +79,25 @@ namespace WinFormsApp1
             // 
             this.AdvertenciaText.Location = new System.Drawing.Point(12, 237);
             this.AdvertenciaText.Name = "AdvertenciaText";
-            this.AdvertenciaText.Size = new System.Drawing.Size(206, 280);
+            this.AdvertenciaText.Size = new System.Drawing.Size(206, 248);
             this.AdvertenciaText.TabIndex = 4;
+            // 
+            // BotonGuardar
+            // 
+            this.BotonGuardar.Location = new System.Drawing.Point(113, 508);
+            this.BotonGuardar.Name = "BotonGuardar";
+            this.BotonGuardar.Size = new System.Drawing.Size(94, 29);
+            this.BotonGuardar.TabIndex = 5;
+            this.BotonGuardar.Text = "Guardar QR";
+            this.BotonGuardar.UseVisualStyleBackColor = true;
+            this.BotonGuardar.Click += new System.EventHandler(this.BotonGuardar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 549);
+            this.Controls.Add(this.BotonGuardar);
             this.Controls.Add(this.AdvertenciaText);
             this.Controls.Add(this.BotonGenerador);
             this.Controls.Add(this.label1);
@@ -106,6 +118,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BotonGenerador;
         private System.Windows.Forms.Label AdvertenciaText;
+        private System.Windows.Forms.Button BotonGuardar;
     }
 }
 

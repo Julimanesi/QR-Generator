@@ -35,6 +35,19 @@ namespace WinFormsApp1
             }
         }
 
-        
+        private void BotonGuardar_Click(object sender, EventArgs e)
+        {
+            Guardar_Como();
+        }
+
+        public void Guardar_Como()
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Imagen (*.jpg;*.png)|*.jpg;*.png";//estas son las extensiones que acepta
+            if (dialog.ShowDialog() == DialogResult.OK)// si haces click en aceptar guarda el texto en un archivo 
+            {
+                ImagenQR.Image.Save(dialog.FileName);
+            }
+        }
     }
 }
