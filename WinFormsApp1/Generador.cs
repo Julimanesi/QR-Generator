@@ -28,7 +28,10 @@ namespace WinFormsApp1
                 {
                     var response = await client.SendAsync(request);
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                    { 
                         QRBarcode = Image.FromStream(await response.Content.ReadAsStreamAsync());
+                        advertencia = "";
+                    }
                     else
                     {
                         switch (response.StatusCode)
